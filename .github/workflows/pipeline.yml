@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.8'
-      - run: pip install pytest
+      - run: pip install pytest 
       
       - name: isort check
         uses: isort/isort-action@v1.0.0
@@ -38,7 +38,7 @@ jobs:
       - name: Black Check
         uses: jpetrucciani/black-check@22.10.0
         with:
-          black_flags: --check
+          black_flags: --diff
       # Runs a single command using the runners shell
       - name: Run Pytest
         run: pytest -vv
