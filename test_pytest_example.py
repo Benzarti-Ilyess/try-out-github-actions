@@ -1,4 +1,5 @@
 import sys
+
 import pytest
 
 @pytest.mark.skipif(sys.version_info < (3,6),
