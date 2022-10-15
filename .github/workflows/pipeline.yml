@@ -31,7 +31,7 @@ jobs:
       - run: pip install pytest
       
       - name: isort check
-      - uses: isort/isort-action@v1.0.0
+        uses: isort/isort-action@v1.0.0
         with:
           configuration: --check-only --diff
       
