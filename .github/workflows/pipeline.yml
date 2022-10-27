@@ -34,7 +34,7 @@ jobs:
         run : isort . --check-only --diff
       
       - name: Black check
-        run: black --diff
+        run: black . --diff
       
       # Runs a single command using the runners shell
       - name: Run Pytest
