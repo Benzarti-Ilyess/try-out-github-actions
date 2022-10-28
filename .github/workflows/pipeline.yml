@@ -31,7 +31,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           
-      - run: pip install pytest isort black
+      - run: pip install pytest isort black pytest-cov
       
       - name: isort check
         if: always()
@@ -41,7 +41,10 @@ jobs:
         if: always()
         run: black . --diff
       
-      # Runs a single command using the runners shell
       - name: Run Pytest
         if: always()
         run: pytest -vv
+        
+      - name: Test Coverage Reporting
+        if: always()
+        run: pytest --cov=src/ tests/
