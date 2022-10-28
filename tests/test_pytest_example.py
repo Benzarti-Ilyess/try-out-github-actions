@@ -1,6 +1,6 @@
-import pytest
-
 import sys
+
+import pytest
 
 from src.example import assert_true
 
