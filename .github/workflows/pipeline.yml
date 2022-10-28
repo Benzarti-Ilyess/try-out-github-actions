@@ -35,6 +35,7 @@ jobs:
       - run: pip install pytest isort black
       
       - name: isort check
+        if: always()
         run : isort . --check-only --diff
       
       - name: Black check
